@@ -138,6 +138,9 @@ return {
 			filetypes = { "html", "typescriptreact", "javascriptreact", "css", "sass", "scss", "less", "svelte" },
 		})
 
+		-- configure go server
+		lspconfig.gopls.setup({})
+
 		-- configure python server
 		lspconfig["pyright"].setup({
 			capabilities = capabilities,
