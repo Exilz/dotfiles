@@ -80,6 +80,9 @@ return {
 			on_attach = on_attach,
 		})
 
+		-- configure htmx server
+		lspconfig.htmx.setup({})
+
 		-- configure typescript server with plugin
 		lspconfig["tsserver"].setup({
 			capabilities = capabilities,
