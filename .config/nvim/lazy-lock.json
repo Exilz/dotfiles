@@ -8,6 +8,7 @@
   "cmp_luasnip": { "branch": "master", "commit": "05a9ab28b53f71d1aece421ef32fee2cb857a843" },
   "conform.nvim": { "branch": "master", "commit": "55619bcb306a1a37d487ed31b360a41c343ee74a" },
   "dressing.nvim": { "branch": "master", "commit": "572314728cb1ce012e825fd66331f52c94acac12" },
+  "elixir-tools.nvim": { "branch": "main", "commit": "815cf0b0aab0421f8490199c0dd7442d22a7c1b7" },
   "friendly-snippets": { "branch": "main", "commit": "dd2fd1281d4b22e7b4a5bfafa3e142d958e251f2" },
   "gitsigns.nvim": { "branch": "main", "commit": "805610a9393fa231f2c2b49cb521bfa413fadb3d" },
   "go.nvim": { "branch": "master", "commit": "588ab7b6511538ba182ad96e4d7d29615e11cb24" },

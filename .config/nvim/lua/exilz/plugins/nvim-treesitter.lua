@@ -40,6 +40,9 @@ return {
 					"query",
 					"terraform",
 					"glimmer",
+					"elixir",
+					"eex",
+					"heex",
 				},
 				incremental_selection = {
 					enable = true,
