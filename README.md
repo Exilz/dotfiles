@@ -6,4 +6,4 @@
 - Tmux
 - Zsh & Oh my zsh
 
-![](https://i.imgur.com/aZzrKsW.png)
+![](https://i.imgur.com/6j1lKrV.jpeg)
