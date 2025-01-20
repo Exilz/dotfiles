@@ -1,2 +1,17 @@
-tmp/*
+# Ignore everything
+*
+
+# Allow specific folders and their contents
+!.config/
+!.config/nvim/
+!.config/skhd/
+!.config/yabai/
+!bg/
+
+# Ensure nested files are included
+!.config/nvim/**
+!.config/skhd/**
+!.config/yabai/**
+!bg/**
+
 .DS_Store
