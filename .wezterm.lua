@@ -18,7 +18,7 @@ config.window_background_opacity = 1
 config.background = {
 	{
 		source = {
-			File = wezterm.config_dir .. "/dotfiles/bg/jp-1.jpg",
+			File = wezterm.config_dir .. "/dotfiles/bg/jp-2.jpg",
 		},
 		hsb = {
 			brightness = 0.015,
