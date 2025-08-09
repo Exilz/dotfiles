@@ -8,5 +8,5 @@ keymap.set("n", "<leader>-", "<cmd>split<CR>", { desc = "Horizontal split" })
 keymap.set("n", "<leader>|", "<cmd>vsplit<CR>", { desc = "Vertical split" })
 
 -- Buffers
-keymap.set("n", "<leader>c", "<cmd>:bd | :bprevious<CR>", { desc = "Close buffer" })
+keymap.set("n", "<leader>c", "<cmd>:lua require('snacks').bufdelete()<CR>", { desc = "Close buffer" })
 keymap.set("n", "<leader>bC", "<cmd>:bufdo bd | :lua require('alpha').start()<CR>", { desc = "Close all buffers" })

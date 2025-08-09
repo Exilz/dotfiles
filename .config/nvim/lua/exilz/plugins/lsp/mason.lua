@@ -39,7 +39,6 @@ return {
 				"pyright",
 				"rust_analyzer",
 				"terraformls",
-				"htmx",
 				"gopls",
 				"elixirls",
 			},
