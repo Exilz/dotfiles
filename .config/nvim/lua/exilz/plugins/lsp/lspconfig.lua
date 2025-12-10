@@ -6,11 +6,8 @@ return {
 		{ "antosha417/nvim-lsp-file-operations", config = true },
 	},
 	config = function()
-		-- import lspconfig plugin
 		local lspconfig = require("lspconfig")
 		local configs = require("lspconfig.configs")
-
-		-- import cmp-nvim-lsp plugin
 		local cmp_nvim_lsp = require("cmp_nvim_lsp")
 
 		local keymap = vim.keymap -- for conciseness
@@ -88,30 +85,25 @@ return {
 			capabilities = capabilities,
 		})
 
-		-- configure html server
-		lspconfig["html"].setup({
+		vim.lsp.config("html", {
 			capabilities = capabilities,
 			on_attach = on_attach,
 		})
 
-		-- configure htmx server
 		-- disabled for now, breaks buf.hover in typescript
 		-- lspconfig.htmx.setup({})
 
-		-- configure css server
-		lspconfig["cssls"].setup({
+		vim.lsp.config("cssls", {
 			capabilities = capabilities,
 			on_attach = on_attach,
 		})
 
-		-- configure tailwindcss server
-		lspconfig["tailwindcss"].setup({
+		vim.lsp.config("tailwindcss", {
 			capabilities = capabilities,
 			on_attach = on_attach,
 		})
 
-		-- configure svelte server
-		lspconfig["svelte"].setup({
+		vim.lsp.config("svelte", {
 			capabilities = capabilities,
 			on_attach = function(client, bufnr)
 				on_attach(client, bufnr)
@@ -127,47 +119,40 @@ return {
 			end,
 		})
 
-		-- configure prisma orm server
-		lspconfig["prismals"].setup({
+		vim.lsp.config("prismals", {
 			capabilities = capabilities,
 			on_attach = on_attach,
 		})
 
-		-- configure graphql language server
-		lspconfig["graphql"].setup({
+		vim.lsp.config("graphql", {
 			capabilities = capabilities,
 			on_attach = on_attach,
 			filetypes = { "graphql", "gql", "svelte", "typescriptreact", "javascriptreact" },
 		})
 
-		-- configure emmet language server
-		lspconfig["emmet_ls"].setup({
+		vim.lsp.config("emmet_ls", {
 			capabilities = capabilities,
 			on_attach = on_attach,
 			filetypes = { "html", "typescriptreact", "javascriptreact", "css", "sass", "scss", "less", "svelte" },
 		})
 
-		-- configure go server
-		lspconfig.gopls.setup({})
+		vim.lsp.config("gopls", {})
 
-		-- configure python server
-		lspconfig["pyright"].setup({
+		vim.lsp.config("pyright", {
 			capabilities = capabilities,
 			on_attach = on_attach,
 		})
 
-		-- configure rust server
-		lspconfig["rust_analyzer"].setup({
+		vim.lsp.config("rust_analyzer", {
 			capabilities = capabilities,
 			on_attach = on_attach,
 			filetypes = { "rust" },
 		})
 
-		-- configure lua server (with special settings)
-		lspconfig["lua_ls"].setup({
+		vim.lsp.config("lua_ls", {
 			capabilities = capabilities,
 			on_attach = on_attach,
-			settings = { -- custom settings for lua
+			settings = {
 				Lua = {
 					-- make the language server recognize "vim" global
 					diagnostics = {
@@ -182,6 +167,20 @@ return {
 					},
 				},
 			},
+		})
+
+		vim.lsp.enable({
+			"html",
+			"cssls",
+			"tailwindcss",
+			"svelte",
+			"prismals",
+			"graphql",
+			"emmet_ls",
+			"gopls",
+			"pyright",
+			"rust_analyzer",
+			"lua_ls",
 		})
 	end,
 }
