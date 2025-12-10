@@ -14,6 +14,7 @@ return {
 
 		-- configure nvim-tree
 		nvimtree.setup({
+			hijack_directories = { enable = false },
 			view = {
 				width = 35,
 				relativenumber = true,
