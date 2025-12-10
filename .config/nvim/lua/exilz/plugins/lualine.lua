@@ -30,12 +30,12 @@ return {
 				c = { bg = colors.bg, fg = colors.fg },
 			},
 			visual = {
-				a = { bg = colors.violet, fg = colors.bg, gui = "bold" },
+				a = { bg = colors.yellow, fg = colors.bg, gui = "bold" },
 				b = { bg = colors.bg, fg = colors.fg },
 				c = { bg = colors.bg, fg = colors.fg },
 			},
 			command = {
-				a = { bg = colors.yellow, fg = colors.bg, gui = "bold" },
+				a = { bg = colors.violet, fg = colors.bg, gui = "bold" },
 				b = { bg = colors.bg, fg = colors.fg },
 				c = { bg = colors.bg, fg = colors.fg },
 			},
@@ -58,6 +58,17 @@ return {
 				disabled_filetypes = { "NvimTree" },
 			},
 			sections = {
+				lualine_c = {
+					{
+						"filename",
+						path = 1,
+						symbols = {
+							modified = "[+]",
+							readonly = "[-]",
+							unnamed = "[No Name]",
+						},
+					},
+				},
 				lualine_x = {
 					{
 						lazy_status.updates,
